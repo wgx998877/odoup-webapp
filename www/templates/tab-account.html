@@ -1,9 +1,16 @@
-<ion-view view-title="Account">
-  <ion-content>
+<ion-view title="Account" hide-nav-bar="false">
+  <ion-content class="padding">
     <ion-list>
     <ion-toggle  ng-model="settings.enableFriends">
         Enable Friends
     </ion-toggle>
+    <ion-toggle  ng-model="settings.enableFriends">
+        Enable Friends
+    </ion-toggle>
+    <ion-toggle  ng-model="!settings.enableFriends">
+        Enable Friends
+    </ion-toggle>
+    
     </ion-list>
   </ion-content>
 </ion-view>

@@ -30,6 +30,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $stateProvider
 
   // setup an abstract state for the tabs directive
+    .state('account', {
+    url: "/account",
+    templateUrl: "templates/tab-account.html",
+        controller: 'AccountCtrl'
+  })
+    .state('answer', {
+    url: "/answer",
+    templateUrl: "templates/answer.html",
+        controller: 'AccountCtrl'
+  })
+
     .state('tab', {
     url: "/tab",
     abstract: true,
@@ -47,7 +58,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-
   .state('tab.chats', {
       url: '/chats',
       views: {
@@ -66,17 +76,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
-
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.more', {
+    url: '/more',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-more':{
+        templateUrl: 'templates/tab-more.html',
+        controller: 'MoreCtrl'
       }
     }
-  });
-
+  })
+  ;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
 
